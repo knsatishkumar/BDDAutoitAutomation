@@ -1,0 +1,23 @@
+﻿;Local $sText = WinGetText($hWnd, "", "#327701")
+
+Local $Text=ControlGetText("Calculator","","#327701")
+
+; Display the text of the edit control.
+;MsgBox($MB_SYSTEMMODAL, "", "The text in Edit1 is: " & $sText)
+;MsgBox($MB_SYSTEMMODAL, "", "The text in Edit1 is: " & $Text)
+
+ ; Retrieve the window text of the active window.
+    Local $sText = WinGetText("[ACTIVE]")
+
+    ; Display the window text.
+    ;MsgBox($MB_SYSTEMMODAL, "", $sText)
+
+	ConsoleWrite($sText)
+
+	;ECHO ($sText)
+
+; Slow the script down so we can see what's going on.
+Sleep(2000)
+
+; Close the Windows calculator - always tidy up afterwards.
+WinClose("Calculator")
